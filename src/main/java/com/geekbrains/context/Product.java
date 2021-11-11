@@ -1,5 +1,6 @@
-public class Product {
+package com.geekbrains.context;
 
+public class Product {
     private int id;
     private String title;
     private double cost;
@@ -11,8 +12,11 @@ public class Product {
     }
 
     public String productInfo(){
-        return String.format("ID product: %s, Title product: %s, Cost: %.2f",
-                id, title, cost);
+        return String.format("ID: %s, Название: %s, Стоимость: %.2f", id, title, cost);
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
     public int getId() {
@@ -26,6 +30,4 @@ public class Product {
     public double getCost() {
         return cost;
     }
-
-
 }
